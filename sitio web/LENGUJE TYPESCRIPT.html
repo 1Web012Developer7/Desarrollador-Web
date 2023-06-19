@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contenido.css">
+    <title>Lenguaje TypeScript</title>
+</head>
+<body>
+
+    <h1>¿Qué es TypeScript?</h1>
+
+    <p>TypeScript es una extensión al lenguaje de programación JavaScript que se caracteriza por ampliar su sintaxis en el ámbito de los tipos. En este sentido, es un lenguaje de programación propio que se basa en JavaScript para darnos herramientas de desarrollo en cualquier escala de proyectos.
+        TS está creado sobre la base de la especificación ECMAScript (que establece el diseño formal de JS) añadiendo características adicionales para mejorar su robustez y claridad. Esto hace que TS sea un lenguaje superconjunto de JS que incluye todas sus capacidades más otras adicionales.
+<br><br>
+No obstante, los navegadores web no pueden ejecutar código TS directamente, a menos que sea recompilado previamente a JS. Este proceso puede hacerse a cualquier versión del ECMAscript incluyendo el soporte para navegadores antiguos.
+
+        Además de agregar elementos a la sintaxis de JavaScript, TypeScript se conecta de manera más profunda con los editores de código, revisando errores de manera más oportuna. Una prueba de esto es su integración con Angular, View y React, plataformas fundamentales para un desarrollador web. Mientras que Angular trabaja de manera exclusiva con este lenguaje, View y React tienen la opción de convertir nuestra forma de programar a este lenguaje.
+        
+        Al igual que JavaScript, este es un lenguaje de programación que recibe mucho soporte por parte de su creador. Además, con cada año que pasa vemos que la comunidad que usa este lenguaje crece cada vez más. A continuación, te contamos algunas de las razones por las que muchos desarrolladores usan TypeScript.</p>
+    
+    </p>
+     
+    <div class="ejemplo"><pre class=""><span id="c51d" class="on lx ev pl b gw pp pq l hn pr">// Dato de tipo <strong class="pl ew"><em class="ns">string<br/></em>var</strong> name: string = &#x27;Tu nombre&#x27;;<br/>name = &#x27;Otro nombre&#x27;; // Es correcto<br/>name = 2 // Es incorrecto</span><span id="a87c" class="on lx ev pl b gw qf pq l hn pr">// Dato de tipo <strong class="pl ew"><em class="ns">number<br/></em>var</strong> age: number = 29;<br/>age = 0xf00d; // Es <em class="ns">hexadecimal</em> y es correcto<br/>age = &#x27;3&#x27;; // Es un <em class="ns">string</em> e incorrecto</span><span id="e939" class="on lx ev pl b gw qf pq l hn pr">// Dato de tipo <strong class="pl ew"><em class="ns">boolean</em></strong><br/><strong class="pl ew">var</strong> havePets: boolean = true;<br/>havePets = false; // Es correcto<br/>havePets = 3 // Es incorrecto</span><span id="ec3a" class="on lx ev pl b gw qf pq l hn pr">// Ejemplo<br/><strong class="pl ew">const</strong> test = name + havePets; // No se puede sumar number + boolean</span></pre></div>
+
+
+
+<h2>¿Qué diferencia a TypeScript de JavaScript?</h2>
+
+<p>La principal característica que distingue TS y lo diferencia de JS es el llamado tipado estático.
+
+    Las variables en JS no se declaran especificando un tipo de dato, por lo que que toman automáticamente el del último valor asignado. Esto se denomina tipado dinámico:
+   
+    <table class="valor"><tr><td>
+    <span>let</span> valor = 10; <span class="error">// variable toma tipo entero.</span>
+    </td></tr>
+
+    <tr><td>
+    valor = <span class="hola"> “HOLA” </span>; <span class="error">// variable toma tipo cadena. OK</span>
+    </td></tr></table>
+     <br>
+    TS sin embargo requiere especificar el tipo al declarar una variable de modo que sólo admite la asignación de valores del tipo adecuado. Esto se denomina tipado estático:
+    <br>
+    <br>
+    <table class="valor"><tr><td><div class="variable">
+    <span>let</span> valor: number; <span class="error">// Variable tipo estático.</span>
+    </div></td></tr>
+
+    <tr><td><div class="variable">
+    valor = 5;
+    </div></td></tr>
+
+    <tr><td><div class="variable">
+    valor = <span class="hola">“HOLA”</span>; <span class="error">// Muestra ERROR.</span>
+    </div></td></tr></table>
+    <br>
+    Con el tipado estático de TS el código anterior muestra un error al intentar asignar a la variable de tipo numérico valor una cadena de texto. Esta situación es además advertida al programador durante la escritura del código y no permite la ejecución hasta ser subsanada.
+    
+    Typescript qué es y para qué sirve 2
+    En cambio, esta operación anómala pasa inadvertida en JS debido al tipado dinámico. No obstante, TS también puede hacer uso del tipado dinámico si se desea.
+    
+    TS define además tipos y estructuras adicionales no existentes directamente en JS tales como interfaces, enumerados, genéricos, estructuras y tuplas. Por otro lado, su sintaxis para la programación orientada a objetos (POO) es mucho más similar a la de lenguajes como C# o Java que en el caso de JS. Esto facilita la creación de código más accesible y común.</p>
+
+  
+<h3>Esta representación tipifica dos de los principales objetivos del plan de TypeScript, que son:</h3>
+
+    Para distinguir estáticamente compilaciones que probablemente serán errores garrafales.
+    Para dar un componente organizador a partes más grandes de código.
+
+
+    <h3>Ventajas de TypeScript</h3>
+    
+    <ul>
+    <li>TypeScript presenta errores en el momento de la disposición, mientras que JavaScript, en el tiempo de ejecución.</li>
+    <li>TypeScript brinda las ventajas de la composición estática discrecional: los tipos TS se pueden agregar a factores, capacidades, propiedades, etc.</li>
+    <li>TypeScript sustenta la composición específica o estática. La composición estática puede ser valiosa para ayudar a archivar capacidades, explicar el uso y reducir la sobrecarga psicológica (pistas de tipo de interfaz y errores esperados al programar continuamente).</li>
+    <li>TypeScript se ejecuta en cualquier programa o motor de JavaScript.</li>
+    <li>Herramientas extraordinarias con IntelliSense que brinda pistas dinámicas como complemento del código.
+    <li>TypeScript ayuda en la organización del código.</li>
+    <li>TypeScript tiene una idea de espacio de nombres al caracterizar un módulo.</li>
+    <li>Las explicaciones de TypeScript pueden ser discrecionales.</li>
+    <li>TypeScript mantiene las interfaces.</li>
+    </ul>
+
+    <p>
+    Los módulos de gestión de TypeScript ofrecen una perspectiva destacada entre otros ingenieros de IDE.
+    TypeScript tiene una mejor documentación para las API que está en armonía con un código fuente. Algunas organizaciones informan una disminución en los errores cuando cambian a TypeScript.
+    </p>
+
+    <h3>Desventajas de TypeScript</h3> 
+    <ul>
+    <li>TypeScript dedica un gran esfuerzo a incorporar el código.</li>
+    <li>TypeScript no admite clases teóricas.</li>
+    <li>Cuando se utiliza una biblioteca externa, debe haber un documento de definición, y de vez en cuando generalmente no está disponible.</li>
+    <li>La naturaleza de los documentos de definición de tipo es una preocupación.</li>
+    <li>Siempre que TypeScript deba ejecutarse en un programa, debería haber un paso de recopilación para cambiar TypeScript a JavaScript.</li>
+    <li>Inscribir ingenieros de TypeScript puede ser una verdadera molestia, ya que una parte de los diseñadores no están interesados ​​​​en aprender TypeScript, y están completamente de acuerdo con el uso de JavaScript. </li>
+    <li>Los grupos que ya usan JavaScript, se vuelven rentables con TypeScript después de aproximadamente 2-3 meses, y están familiarizados con TypeScript después de aproximadamente una gran parte de un año. Así que instruir al personal también puede ser un obstáculo.</li>
+    <li>TypeScript no es completamente coexpresivo con JavaScript. Los aspectos destacados que faltan incluyen: HOF, Composición, Genéricos con clave más alta.</li>
+    </ul>
+
+
+
+
+<section class="botones1">
+    <a href="LENGUAJE SWIFT.html"><input type="submit" value="Regresar Al Anterior" class="buttonIr"></a>
+    <a href="portafolio.html" target="_parent"><input type="submit" value="Ir Al Portafolio" class="buttonIr"></a>
+    <a href="LENGUAJE DART.HTML"><input type="submit" value="Ir Al Siguiente" class="buttonIr"></a>
+</section>    
+
+</body>
+</html>

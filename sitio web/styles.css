@@ -1,0 +1,676 @@
+/* Estilos generales */
+/*Portafolio*/
+
+
+    .swal-wide{
+     
+      z-index: 99999 !important;
+      overflow: hidden;
+  }
+
+body{
+  overflow: hidden;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  margin-left: 10px;
+  margin-right: 10px;
+  background:linear-gradient(125deg,orange,greenyellow);
+}
+
+header{
+overflow: hidden;
+background-image: url(descarga.jpeg);
+position: absolute;
+background-repeat: repeat-x;
+top: 0;
+left: 0;
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 10000;
+padding-top: 60px;
+padding-bottom: 60px;
+
+}
+
+:root{
+  --color:white;
+}
+
+header ul li{
+list-style-type: none;
+margin-left: 20px;
+}
+
+header ul li a{
+
+  padding: 6px 15px;
+  color: #fff;
+  border-radius: 20px;
+}
+
+header ul li a:hover , 
+header ul li a.active {
+  background: purple;
+  color: white;
+  border: solid purple;
+  border-color: var(--color);
+  box-shadow: 0 0 20px #fff;
+}
+
+
+  /* Estilos de encabezado */
+  
+  h1 {
+    margin: 0;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  nav ul li {
+    margin-right: 20px;
+  }
+
+/*estilos diferentes*/
+
+h4{
+  color: #333;
+  text-align: left;
+}
+
+h1{
+text-align: center;
+padding: 0;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+ 
+  /* Estilos de secciones */
+  
+  section {
+    padding: 10px;
+    position: relative;
+  }
+  
+#inicio{
+
+padding-top: 200px;
+}
+
+  #proyectos .proyecto { 
+    padding-bottom: 0;   
+ margin-bottom: 20px;
+ justify-content: left;
+  }
+  
+  #proyectos .proyecto h3 {
+    margin: 0;
+  }
+
+  #logo,
+  img{
+    padding-right: 30px;
+    float: right;
+    width: 300px;
+    height: 400px;
+  }
+   
+
+  #habilidades ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  #habilidades li {
+    background-color: #f8f8f8;
+    border-radius: 20px;
+    padding: 10px 30px ;
+    margin: auto;
+  }
+
+  #contacto,
+  #educacion,
+  #experiencia{
+padding: 10px;
+text-align: center;
+  }
+
+  #habilidades{
+    text-align: center;
+    padding-top: 150px;
+  }
+
+  #experiencia .trabajo {
+    margin-bottom: 10px;
+   
+  }
+  
+  #experiencia .trabajo h3 {
+    margin: 0;
+  }
+  
+#login{
+  padding-top: 550px;
+}
+
+.linea{
+  line-height: 25px;
+}
+
+#acercade{
+
+padding-bottom: 0px;
+ margin-bottom: 0;
+}
+  
+/* Estilos para dispositivos móviles */
+
+@media (max-width: 768px) {
+   header nav ul{
+    flex-direction: column;
+    height: auto;
+    margin-bottom: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 10px 0;
+  }
+}
+  
+    nav ul li {
+      margin-bottom: 10px;
+    }
+  
+    #habilidades ul {
+      justify-content: flex-start;
+    }
+  
+
+    /* Estilos para la galería */
+    .gallery-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .gallery-item {
+      margin: 10px;
+    }
+    
+    .gallery-item img {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      cursor: pointer;
+    }
+    
+    /* Estilos para la vista modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      overflow: auto;
+    }
+    
+    .modal-content {
+      display: block;
+      margin: 10% auto;
+      max-width: 800px;
+
+    }
+    
+    .modal-content img {
+      width: 80%;
+      height: auto;
+    }
+
+   h1 {
+  text-align: center;
+}
+
+.gallery-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.gallery-item {
+  margin: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-item img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.2);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  margin: auto;
+  z-index: 999;
+  top: 100px;
+  left: 200px;
+  width: 60%;
+  height: 80%;
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow: auto;
+}
+
+.modal-content {
+  display: block;
+  margin-left: 13%;
+  max-width: 800px;
+}
+
+.modal-content img {
+  width: 100%;
+  height: auto;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  border-radius: 50%;
+  padding: 5px;
+  cursor: pointer;
+}
+ 
+
+  
+/*SECCIÓN DE LOGIN*/
+
+.formulario {
+
+position: absolute;
+top: 30%;
+left: 30%;
+transform: translate(-50%,-50%);
+width: 480px;
+height: 450px;
+border-radius: 20px;
+background: linear-gradient(150deg,#5B2C6F,#145A32, #0033CC);
+
+}
+
+.formulario{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+width: 50%;
+background: white;
+border-radius: 10px
+
+}
+
+.formulario h1{
+text-align: center;
+padding: 20px 20px 20px 20px;
+border-bottom: 1px solid silver;
+}
+
+.formulario form{
+
+box-sizing: border-box;
+}
+
+form .usuario{
+  position: relative;
+  border-bottom: 2px solid darkgray;
+  margin: 20px 20px 20px 20px;
+}
+
+.usuario input{
+width: 100%;
+height: 100%;
+font-size: 16px;
+border: none;
+background: none;
+outline: none;
+padding-top: 15px;
+}
+
+.usuario label{
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  color: white;
+  transform: translateY(-50%);
+  font-size: 16px;
+  pointer-events: none;
+}
+
+.usuario span::before{
+content: " ";
+position: absolute;
+top: 40px;
+left: 30px;
+width: 100%;
+height: 2px;
+background: #5B2C6F;
+transition: .5s;
+}
+.usuario span::before{
+  content: " ";
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #5B2C6F;
+  transition: .5s;
+  }
+
+.usuario input:focus ~ label,
+.usuario input:focus ~ label{
+top: -5px;
+color:5B2C6F;
+}
+
+
+
+input[type="submit"]{
+width: 100%;
+height: 100%;
+border: 1px solid;
+background: #5B2C6F;
+border-radius: 25px;
+font-size: 18px;
+color: white;
+cursor: pointer;
+outline: none;
+
+}
+
+input[type="submit"]:hover{
+border-color: #5B2C6F;
+transition: .5s;
+
+}
+
+textarea {
+max-height: 55px;  
+min-width: 50px;
+max-width: 450px;
+font-size: 18px;
+margin: 15px;
+padding: 10px;
+}
+
+.prese{
+  text-align: justify;
+}
+
+
+
+
+/*Responsive Desing*/
+
+@media only screen and (max-width: 350px) {
+  /* Modificar los estilos necesarios para dispositivos móviles */
+  .container {
+    padding: 10px 30px 30px 10px;
+    margin-top: 40px;
+  }
+}
+
+/* Estilos para tablets */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  /* Modificar los estilos necesarios para tablets */
+  .container {
+    padding: 15px;
+  }
+}
+
+/*estilo de entrada al portafolio*/
+
+.portafolio {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1s, transform 1s;
+}
+
+/*contenido de la presentacion*/
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+
+.thumbnail:hover {
+  border: solid ;
+  border-radius: 10px;
+  width: 280px; /* Ajusta el ancho de la imagen según tus necesidades */
+  height: 300;
+  cursor: pointer;
+  box-shadow:var(--color);
+}
+
+.caption {
+  position: absolute;
+  top:0; /* Coloca la descripción debajo de la imagen */
+  left: -100%;
+  width: 90%;
+ 
+  padding: 10px 10px 10px 10px;
+  display: none; /* Oculta la descripción por defecto */
+  
+}
+
+.caption:hover{
+  color: #fff;
+  background-color:purple;
+  border-radius: 10px;
+  border: solid ;
+  box-shadow:var(--color);
+}
+
+.image-container:hover .caption {
+  display: block; /* Muestra la descripción al pasar el cursor sobre la imagen */
+}
+
+@media (max-width: 375px){
+  textarea{
+    max-width: 120px;
+    resize: none;
+  }
+
+}
+
+@media (max-width: 400px) and (max-width:450px){
+
+  .modal {
+  display: none;
+  position: fixed;
+  margin: auto;
+  z-index: 999;
+  top: 100px;
+  left: 38px;
+  width: 80%;
+  height: 45%;
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow: auto;
+}
+
+ }
+
+ @media (max-width:400px) and (max-width:450px){
+
+  
+.modal-content {
+  display: block;
+  margin-left: 22%;
+  max-width: 400px;
+}
+
+ }
+
+ /*modal responsivo*/
+
+ @media(max-width:400px) {
+
+  
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.thumbnail {
+  width: 200px; /* Ajusta el ancho de la imagen según tus necesidades */
+  height: auto;
+  cursor: pointer;
+}
+
+.caption {
+  position: absolute;
+  top:100%; /* Coloca la descripción debajo de la imagen */
+  left: 0%;
+  width: 90%;
+  padding: 10px 10px 10px 10px;
+  display: none; /* Oculta la descripción por defecto */
+}
+
+.prese{
+  text-transform: capitalize;
+}
+
+.caption:hover{
+  color: #fff;
+  background-color:purple;
+  border-radius: 10px;
+  border: solid ;
+  box-shadow:var(--color);
+}
+
+.image-container:hover .caption {
+  display: block; /* Muestra la descripción al pasar el cursor sobre la imagen */
+}
+
+ }
+
+/*navegacino responsiva*/
+
+ @media(max-width:400px){
+
+header{
+  background-image: url(descarga.jpeg);
+  position: absolute;
+  background-repeat: repeat-x;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content:right;
+  align-items: center;
+  z-index: 10000;
+  padding-top: 60px;
+  padding-bottom: 60px;
+    
+  }
+  
+  
+  header ul li{
+  list-style-type: none;
+  margin-left: 20px;
+  }
+  
+  header ul li a{
+  
+    padding: 6px 15px;
+    color: #fff;
+    border-radius: 20px;
+  }
+  
+  header ul li a:hover , 
+  header ul li a.active {
+    background: purple;
+    color: white;
+   
+  }
+
+  #proyectos .proyecto { 
+ 
+ padding-bottom: 0;   
+ justify-content: left;
+  }
+  
+  #proyectos h2 {
+    padding-top: 20px;
+    margin: 0;
+  }
+
+  #proyectos .proyecto h3 {
+    padding-top: 20px;
+    margin: 0;
+  }
+
+  section {
+    padding: 10px;
+    position: relative;
+  }
+  
+#inicio{
+padding-bottom: 10px;
+padding-top: 200px;
+padding-left: 25px;
+}
+
+#logo{
+padding-left: 25px;
+padding-bottom: 100px;
+  
+}
+
+
+#habilidades ul {
+  padding: 5px 5px 5px 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#habilidades li {
+  padding: auto;
+  background-color: #f8f8f8;
+  border-radius: 20px;
+  padding: 10px 30px ;
+  margin: auto;
+}
+  
+/*presentacion*/
+
+
+
+ }

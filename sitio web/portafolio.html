@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+<head> 
+<script>
+  window.addEventListener('DOMContentLoaded', function() {
+      // Obtener todos los enlaces
+      var links = document.querySelectorAll('a');
+
+      // Deshabilitar los enlaces
+      function disableLinks() {
+        for (var i = 0; i < links.length; i++) {
+          links[i].addEventListener('click', function(event) {
+            event.preventDefault();
+          });
+        }
+      }
+
+      // Habilitar los enlaces
+      function enableLinks() {
+        for (var i = 0; i < links.length; i++) {
+          links[i].removeEventListener('click', function(event) {
+            event.preventDefault();
+          });
+        }
+      }
+
+      // Mostrar mensaje de bienvenida
+      Swal.fire({
+    title: 'Bienvenido/a A Desarrollador Web',
+    input: 'text',
+    inputLabel: 'Por favor, ingresa tu nombre',
+    showCancelButton: false,
+    confirmButtonText: 'Continuar',
+    allowOutsideClick: false,
+    allowEscapeKey: false,
+      allowEnterKey: false,
+      focusConfirm: false,
+    widht:'100%',
+    height:'100%',
+    backdrop: `rgba(0,0,123,0.4)`,
+    onBeforeOpen: disableLinks, // Deshabilitar los enlaces al abrir el mensaje
+        onClose: enableLinks // Habilitar los enlaces al cerrar el mensaje
+      }).then(function() {
+        // Desbloquear el sitio web
+        document.body.style.overflow = 'auto';
+      });
+     inputValidator: (value) => {
+      if (!value) {
+        return 'Debes ingresar un nombre';
+      }
+    }
+  }).then((result) => {
+    if (result.isConfirmed) {
+      // Mostrar mensaje de bienvenida utilizando SweetAlert2
+      Swal.fire({
+        icon: 'success',
+        title: '¡Bienvenido/a, ' + result.value + '!',
+        showConfirmButton: false,
+        timer: 3000
+
+      });
+
+      // Actualizar el mensaje en el contenedor de la animación
+      var welcomeMessage = document.getElementById("welcomeMessage");
+      welcomeMessage.textContent = "¡Bienvenido/a, " + result.value + "!";
+    }
+    });
+</script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="icono2.jpg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.4/dist/sweetalert2.min.css">  
+  <title>Mi Portafolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <nav>
+      <ul>
+        
+        <li><a href="#inicio" class="active">Inicio</a></li>
+        <li><a href="index.html">Proyectos</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#experiencia">Experiencia</a></li>
+        <li><a href="#educacion">Educación</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#acercade">Acerca De</a></li>
+
+        
+      </ul>
+    </nav>
+</header>
+
+  <section id="inicio">
+    <div id="logo">
+    <div class="image-container">
+      <img src="presentacion.jpg" alt="Imagen" class="thumbnail">
+      <div class="caption">
+        <h5 class="pres">HOLA MI NOMBRE ES JUAN, SOY UN DESARROLLADOR WEB.</h5>
+        <p class="prese">he desempeñado mi trabajo mediente este proyecto web,
+          llevo alrededor de 3 años trabajando en este mundo de la programación.
+          actualmente tengo experiencia en backend y frontend que usualmente 
+          pongo mis conocimientos en este tipo de proyectos como lo es sitios web Y
+          sitios mas complejas como los son con base de datos, 
+          es por ello estimado usuario he creado este apartado para que tu puedas tener mejores conocimientos en esta rama de la informatica 
+          si tu quieres ser un dearrallor fullstak.
+          <br><br></p>
+          <p class="pre1">¡Te Invito A Seguir Disfrutandp De Tú Experiencia En 1Web12Developer7!!😉</p> 
+        </p>
+      </div>
+    </div>
+  </div>
+
+       
+    <h2>¡Bienvenido a mi portafolio!</h2>
+    <p>Me llamo JUAN y soy un desarrollador web especializado en HTML5,CSS Y JAVASCRIPT. </p>
+      <!-- Aquí puedes agregar una foto tuya -->
+  </section>
+
+  <section id="proyectos">
+    <h2>Proyectos</h2>
+    <div class="proyecto">
+      <h3>Proyecto 1</h3>
+      <p>Desarrollo De Sitio Web, Acerca De Los Lenguajes De Programación.</p>
+    </div>
+   
+    <!-- Agrega más proyectos -->
+  </section>
+
+  <section id="habilidades">
+    <h2>Habilidades</h2>
+    <ul>
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>JavaScript</li>
+      <li>Php</li>
+      <li>MySql</li>
+      <li>Responsive Web Design</li>
+      <li>Frameworks de JavaScript (React, Angular, etc.)</li>
+      <!-- Agrega más habilidades -->
+    </ul>
+  </section>
+
+  <section id="experiencia">
+    <h2>Experiencia</h2>
+    <div class="trabajo">
+      <h3>Conalep 331</h3>
+      <p>Desempeño Mi Creatividad Mediante El Desarrollo Web, Utilizando HTML5, CSS3, Javascript, Php, Entre Otros Lenguajes De Programación.</p>
+    </div>
+    
+    <!-- Agrega más experiencias laborales -->
+  </section>
+
+  <section>
+  <div class="gallery-container">
+    <div class="gallery-item">
+      <img src="portafolio.jpg" alt="Imagen 1" onclick="openModal(this)">
+    </div>
+    <div class="gallery-item">
+      <img src="portafolio1.png" alt="Imagen 2" onclick="openModal(this)">
+    </div>
+    <div class="gallery-item">
+      <img src="portafolio2.png" alt="Imagen 3" onclick="openModal(this)">
+    </div>
+    <div class="gallery-item">
+      <img src="portafolio3.jpg" alt="Imagen 4" onclick="openModal(this)">
+    </div>
+    <div class="gallery-item">
+      <img src="portafolio2.png" alt="Imagen 5" onclick="openModal(this)">
+    </div>
+    <div class="gallery-item">
+      <img src="portafolio1.png" alt="Imagen 6" onclick="openModal(this)">
+    </div>
+    <!-- Agrega más elementos de galería -->
+  </div>
+
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close-button" onclick="closeModal()">&times;</span>
+      <img id="modalImg" src="" alt="Imagen en Modal">
+    </div>
+  </div>
+  </section>
+
+
+
+  <section id="educacion">
+    <h2>Educación</h2>
+    <ul>
+      <li>Título Profesional En Desarrollo Web</li>
+      <li>Certificación en HTML5 y CSS3</li>
+      <!-- Agrega más educación -->
+    </ul>
+  </section>
+
+
+  <!--Sección De Contacto-->
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <h3>Puedes contactarme a través de:</h3>
+    <ul class="linea">
+      <li>Email: ja573193@gmail.com</li>
+      <li>Teléfono: 9191193548</li>
+      </ul>
+
+  <!--Login De Contacto-->
+   
+
+ <section id="login">
+<form method="POST" action="https://formsubmit.com/ja573193@gmail.com">
+
+  <div class="formulario">
+  <h1>CORREO ELECTRONICO</h1>
+
+<div class="usuario">
+<input type="text" name="name1" placeholder="DE: " required>
+<label></label>
+</div>
+
+<div class="usuario">
+<input type="text" name="name2" placeholder="PARA: " required>
+<label></label>
+</div>
+
+<div class="usuario">
+<input type="email" name="email" placeholder="CORREO ELECTRONICO"  required>
+<label></label>
+</div>
+
+<div class="usuario">
+<input type="text" name="asunto" placeholder="ASUNTO:" required>
+<label></label>
+</div>
+
+<textarea placeholder="MENSAJE" name="msg" required></textarea>
+
+<div><input type="submit" value="ENVIAR"></div>
+</div>
+</form>
+
+    </div>
+  </section>
+
+
+
+
+<section id="acercade">
+
+
+<h3>Esta Página Se Editó Por Última Vez El 24 de Mayo 2023 A Las 20:25</h3>
+
+
+<p>Esta Pagina Fue Creada Con La Intención De Que Nuestra audiencia O Usuarios Que Navegen Dentro De Nuestro Sitio Web, 
+  Queden Completamente Satisfechos Con Los Datos Proporcionados. 
+  Además Que Sea Totalmente Eficaz Dentro De La Rama Informática, Que Todos Lleven Conocimiento Al Inspeccionar Nuestro Sitio. 
+</p>
+
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.4/dist/sweetalert2.all.min.js"></script>
+  
+</body>
+<script>
+function openModal(imageElement) {
+  var modal = document.getElementById("myModal");
+  var modalImg = document.getElementById("modalImg");
+  modal.style.display = "block";
+  modalImg.src = imageElement.src;
+}
+
+function closeModal() {
+  var modal = document.getElementById("myModal");
+  modal.style.display = "none";
+}
+</script>
+
+<script>
+let animacion=document.getElementById('animacion');
+let text=document.getElementById('text');
+
+window.addEventListener('scroll', function(){
+  let value=window.scrollY;
+  animacion.style.left=value*0.25+'px';
+  text.style.marginRight=value*4+'px';
+})
+
+//validar el modo nocturno dentro del portafolio
+
+// Comprueba el estado del modo oscuro en el LocalStorage al cargar la página
+window.addEventListener('load', () => {
+    const isDarkMode = localStorage.getItem('isDarkMode');
+
+    if (isDarkMode === 'true') {
+        enableDarkMode();
+    }
+});
+
+// Agrega o elimina la clase 'dark-mode' del cuerpo de la página y guarda el estado en el LocalStorage
+function toggleDarkMode() {
+    const body = document.body;
+    body.classList.toggle('dark-mode');
+
+    const isDarkMode = body.classList.contains('dark-mode');
+    localStorage.setItem('isDarkMode', isDarkMode);
+}
+
+// Agrega un evento de clic al botón para alternar el modo oscuro
+const modeToggle = document.getElementById('modeToggle');
+modeToggle.addEventListener('click', toggleDarkMode);
+
+//estilo para la presentacion
+
+document.addEventListener("DOMContentLoaded", function() {
+    var portafolio = document.querySelector(".portafolio");
+
+    setTimeout(function() {
+        portafolio.style.opacity = "1";
+        portafolio.style.transform = "translateY(0)";
+    }, 500);
+});
+
+</script>
+</html>

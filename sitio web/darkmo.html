@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <style>
+body {
+    transition: background-color 0.5s ease;
+}
+
+.dark-mode {
+    background-image: url(descarga.jpeg);
+    color: #fff;
+}
+
+    </style>
+
+    <title>Modo Oscuro</title>
+    </head>
+<body>
+    <h1>Modo Oscuro</h1>
+
+    <button id="modeToggle">Alternar Modo</button>
+
+   </body>
+   <script>
+// Comprueba el estado del modo oscuro en el LocalStorage al cargar la página
+window.addEventListener('load', () => {
+    const isDarkMode = localStorage.getItem('isDarkMode');
+
+    if (isDarkMode === 'true') {
+        enableDarkMode();
+    }
+});
+
+// Agrega o elimina la clase 'dark-mode' del cuerpo de la página y guarda el estado en el LocalStorage
+function toggleDarkMode() {
+    const body = document.body.style('descarga.JPEG');
+    body.classList.toggle('dark-mode');
+
+    const isDarkMode = body.classList.contains('dark-mode');
+    localStorage.setItem('isDarkMode', isDarkMode);
+}
+
+// Agrega un evento de clic al botón para alternar el modo oscuro
+const modeToggle = document.getElementById('modeToggle');
+modeToggle.addEventListener('click', toggleDarkMode);
+
+   </script>
+</html>

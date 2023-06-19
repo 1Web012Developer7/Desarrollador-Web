@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CORREO</title>
+    <link rel="stylesheet" href="correo.css">
+</head>
+<body>
+ 
+<form method="POST" action="correo.php">
+
+    <div class="formulario">
+    <h1>CORREO ELECTRONICO</h1>
+
+<div class="usuario">
+<input type="text" name="name1" placeholder="DE: " required>
+<label></label>
+</div>
+
+<div class="usuario">
+<input type="text" name="name2" placeholder="PARA: " required>
+<label></label>
+</div>
+
+<div class="usuario">
+<input type="email" name="email" placeholder="CORREO ELECTRONICO"  required>
+<label></label>
+</div>
+
+<div class="usuario">
+<input type="text" name="asunto" placeholder="ASUNTO:" required>
+<label></label>
+</div>
+
+<textarea placeholder="MESSAGE" name="msg" required></textarea>
+
+<div><input type="submit" value="ENVIAR"></div>
+</div>
+</form>
+
+
+</body>
+</html>
+

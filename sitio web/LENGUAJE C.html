@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contenido.css">
+    <title>Lenguaje C</title>
+</head>
+<body>
+    
+<h1>Lenguaje de programación C</h1>
+
+<p>Uno de los lenguajes de programación más antiguos y utilizados en la actualidad es C. Este histórico de la programación cumple medio siglo este 2023.
+
+    De este modo, fue en 1972 cuando el informático estadounidense Dennis Ritchie creó el lenguaje de programación C.
+    
+    En un principio, se diseñó como una mejora del lenguaje B. De ahí, incluso, vino su nombre. El lenguaje de programación C sirvió para crear el sistema operativo Unix, dando la posibilidad de implementar las populares minicomputadoras PDP-11.
+    
+    El código en C se caracteriza por su eficiencia, por lo que es uno de los lenguajes más empleados para diseñar software de sistemas.</p>
+
+<h2>Definición</h2>
+<p>
+    El lenguaje de programación C se considera como uno de los lenguajes más importantes en la actualidad. Su flexibilidad aporta una gran libertad al programador informático; sin embargo, dispone de una baja comprobación de incorrecciones, por lo que la responsabilidad del profesional es total.
+    
+    Además del desarrollo de sistemas operativos, C es clave en la creación de apps y sustenta otros lenguajes más actuales como Java, C++ o C#.
+    
+    Por otro lado, C está compuesto por una base en la que se almacenan las diferentes funciones en forma de bloques de código y así operar en los parámetros marcados.</p>
+
+<h2>Características del lenguaje C</h2>
+
+<p>¿Cuáles son las características principales del lenguaje de programación C? A continuación, te mostramos las propiedades de C:</p>
+
+<ul>
+    <li>Programación estructurada: C es un lenguaje estructurado.</li>
+    <li>No depende del hardware: De esta forma, se puede migrar a diferentes sistemas operativos.</li>
+    <li>Categoría: Se trata de un lenguaje de programación de nivel medio.</li>
+    <li>Multitarea: En este sentido, no dispone de un cometido específico por lo que se puede programar desde sistemas operativos, hasta apps; pasando por hojas de cálculo o videojuegos.</li>
+    <li>Flexibilidad: Como ya comentábamos, esto va a aportar una absoluta libertad para el programador informático.</li>
+    <li>Desarrollo rápido: Creación rápida de programas y con gran capacidad.</li>
+    <li>Composición: A pesar de que el número de palabras clave es reducido, el lenguaje de programación C es rico en tipos de datos, operadores y variables.</li>
+    <li>Un lenguaje de procesado: El preprocesador de C sirve para definir los macros y poder incluir así diferentes archivos de código fuente.</li>
+</ul>
+
+<p> <h2>Lenguajes derivados de C</h2>
+
+    Desde el inicio del lenguaje han surgido varias ramas de evolución que han generado varios lenguajes:
+</p>
+<ul>
+    <li>Objective-C es un primer intento de proporcionar soporte para la programación orientada a objetos en C, pero actualmente usado en Mac OS X, iOS y GNUstep.</li>
+    <li>C++ (pronunciado C Plus Plus) diseñado por Bjarne Stroustrup fue el segundo intento de proporcionar orientación a objetos a C y es la variante más difundida y aceptada. Esta versión combina la flexibilidad y el acceso de bajo nivel de C con las características de la programación orientada a objetos como abstracción, encapsulación y ocultación.</li>
+    <p>También se han creado numerosos lenguajes inspirados en la sintaxis de C, pero que no son compatibles con él:</p>
+    
+    <li>Java, que une una sintaxis inspirada en la del C++ con una orientación a objetos más similar a la de Smalltalk y Objective C.</li>
+    <li>JavaScript, un lenguaje de scripting creado en Netscape e inspirado en la sintaxis de Java diseñado para dar a las páginas web mayor interactividad. A la versión estandarizada se la conoce como ECMAScript.</li>
+    <li>C# (pronunciado C Sharp) es un lenguaje desarrollado por Microsoft derivado de C/C++ y Java.</li>
+</ul>
+
+<h2>Proceso de compilación</h2>
+<p>La compilación de un programa C se realiza en varias fases que normalmente son automatizadas y ocultadas por los entornos de desarrollo:
+</p>
+<ol><li><b>Preprocesado</b> consistente en modificar el código fuente en C según una serie de instrucciones (denominadas directivas de preprocesado) simplificando de esta forma el trabajo del compilador. Por ejemplo, una de las acciones más importantes es la modificación de las inclusiones (<code>#include</code>) por las declaraciones reales existentes en el archivo indicado.</li>
+<li><b>Compilación</b> que genera el código objeto a partir del código ya preprocesado.</li>
+<li><b>Enlazado</b> que une los códigos objeto de los distintos módulos y bibliotecas externas (como las bibliotecas del sistema) con el código objeto generado en el paso anterior para generar el programa ejecutable final.</li></ol>
+<h3>Ejemplo de código</h3>
+<p>El siguiente programa imprime en pantalla la frase "Hola Mundo" (C99).
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="c1">// necesario para utilizar printf()</span>
+<span class="cp">#</span><span class="w"> </span><span class="cp">include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hola Mundo</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="w">	</span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div><p>
+El siguiente programa muestra el uso de punteros en C.</p><div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
+<span class="w">	</span><span class="c1">// Variable</span>
+<span class="w">	</span><span class="kt">int</span><span class="w"> </span><span class="n">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">99</span><span class="p">;</span>
+
+<span class="w">	</span><span class="c1">// Puntero a variable</span>
+<span class="w">	</span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="p">;</span>
+
+<span class="w">	</span><span class="c1">// Asignación de puntero</span>
+<span class="w">	</span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">numero</span><span class="p">;</span>
+
+<span class="w">	</span><span class="c1">// Acceso al valor de la variable a la que apunta el puntero</span>
+<span class="w">	</span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Numero: %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="o">*</span><span class="n">p</span><span class="p">);</span>
+
+<span class="w">	</span><span class="c1">// Acceso a la dirección a la que apunta el puntero</span>
+<span class="w">	</span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Direccion: %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">p</span><span class="p">);</span>
+
+<span class="w">	</span><span class="c1">// Cambio de valor de la variable a la que apunta el puntero</span>
+<span class="w">	</span><span class="o">*</span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+
+<span class="w">	</span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Numero: %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">numero</span><span class="p">);</span>
+
+<span class="p">}</span>
+</pre></div><p>El siguiente escribe "Hola Mundo" en C89
+</p><div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="cm">/* comentarios con &#39;//&#39; no permitidos en C89, sí en C99 */</span>
+<span class="cp">#</span><span class="w"> </span><span class="cp">include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="c1">  /* necesario para utilizar printf */</span>
+
+<span class="n">main</span><span class="p">()</span><span class="w"> </span><span class="cm">/* tipo &#39;int&#39; de retorno implícito */</span>
+<span class="p">{</span>
+<span class="w">	</span><span class="n">printf</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;Hola Mundo</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
+<span class="w">	</span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+<p>Estructura de control "else if"
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">condicion</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">sentencia</span><span class="w"> </span><span class="mi">1</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">condicion</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">sentencia</span><span class="w"> </span><span class="mi">2</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">condicion</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">sentencia</span><span class="w"> </span><span class="n">n</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">sentencias</span><span class="w"> </span><span class="n">por</span><span class="w"> </span><span class="n">defecto</span>
+<span class="p">}</span>
+</pre></div>
+
+<section class="botones1">
+<a href="DESARROLLO DE SOFTWARE.html"><input type="submit" value="Regresar Al Anterior" class="buttonIr"></a>
+<a href="portafolio.html" target="_parent"><input type="submit" value="Ir Al Portafolio" class="buttonIr"></a>
+<a href="LENGUAJE C++.html"><input type="submit" value="Ir Al Siguiente" class="buttonIr"></a>
+</section>        
+
+</body>
+</html>

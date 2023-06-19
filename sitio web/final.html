@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *{  
+         
+          box-sizing: border-box;
+        }
+        
+        
+body{
+  margin: 50px 50px 50px 50px;
+  background: linear-gradient(2100deg, #663399,#21618C);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  }
+
+p{
+  text-align: justify;
+  text-transform: capitalize;
+}
+
+a{
+  text-decoration: none;
+}
+
+.seccion1{
+  padding-top: 500px;
+  padding-bottom: 80px;
+  padding-left:0px;
+  padding-right: 0px;
+}
+
+
+.animacion {
+  margin: auto;
+  position:relative;
+  width: 70px;
+  height: 70px;
+  transform-style: preserve-3d ;
+  animation: rotate 30s linear infinite;
+}
+
+@keyframes rotate{ 
+0%{
+  transform: perspective(1000px) rotateY(0deg);
+}
+
+100%{
+  transform: perspective(1000px) rotateY(360deg);
+}
+
+}
+
+.animacion span{
+  position:absolute;
+  top: 0;
+  left: 20px;
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  transform: rotateY(calc(var(--i)*45deg))translateZ(350px);
+}
+
+.animacion span img{
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+border-radius: 30px;
+object-fit: cover;
+transition: 2s;
+}
+
+.animacion span:hover img{
+  transform: translateY(-50px) scale(1.2);
+}
+
+.buttonIr{
+margin:0 150px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+flex-wrap:wrap;
+border:solid;
+border-radius:15px;
+padding:6px 6px 6px 6px;
+background-color:purple;
+color: black;
+}
+
+.buttonIr:hover{
+box-shadow: 0 0 20px #fff;
+background-color: purple;
+border-color: #fff;
+}
+
+.gallery-container{
+  
+}
+        </style>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vease tambien</title>
+</head>
+<body> 
+
+<h2>sigue conociendo mas acerca de los lenguajes de programacion derivada de la rama de informatica.</h2>
+
+<p>La programación está en todas partes, en todos los ámbitos laborales, es la carrera con mayor demanda en el mundo. Pero alguna vez te has preguntado ¿En qué industrias podrías trabajar como programador?
+
+  En este artículo te mostrare 9 áreas de la programación en las puedes desempeñarte.
+</p>
+
+
+<section class="gallery-container">
+<div class="seccion1">
+<div class="animacion">
+    <span style="--i:1;"><img src="icono2.jpg"></span>
+    <span style="--i:2;"><img src="image.jpg"></span>
+    <span style="--i:3;"><img src="images (2).jpeg"></span>
+    <span style="--i:4;"><img src="java-concurrency.png"></span>
+    <span style="--i:5;"><img src="java.png"></span>
+    <span style="--i:6;"><img src="phyton.jpg"></span>
+    <span style="--i:7;"><img src="c++.webp"></span>
+    <span style="--i:8;"><img src="c.jpg"></span>
+    <span style="--i:9;"><img src="swift.jpg"></span>
+    <span style="--i:10;"><img src="ruby.webp"></span>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+<a href="LENGUAJE LUA.html"> <input type="submit" value="Regresar Al Anterior" class="buttonIr"> </a>
+<a href="portafolio.html" target="_parent"> <input type="submit" value="Ir Al Portafolio" class="buttonIr"> </a>
+     
+</body>
+</html>
